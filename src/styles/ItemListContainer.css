@@ -1,0 +1,36 @@
+.itemList-Container{
+    background-color: #373940;
+    height: 50vh;    
+    display:flex;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+.itemList-bars{    
+    border-right: 15px solid #F0C40D;
+    border-left: 15px solid #F0C40D;    
+}
+
+.itemList-content {
+    padding: 12px;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.itemList-Tittle{    
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.itemList-P{
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.itemList-content{
+    color:#fff;
+}
+
