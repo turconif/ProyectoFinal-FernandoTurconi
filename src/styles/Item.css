@@ -1,0 +1,139 @@
+.max-width {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top:40px;
+}
+
+.itemLink {
+    text-decoration: none;
+    color: black;
+}
+
+.itemLink:hover {
+    color: black;
+}
+
+.productCard {
+    margin: 20px;
+    padding: 10px 0;
+    width: 300px;
+}
+
+.productImg {
+    max-height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.productCardPrice {
+    color: red;
+    font-weight: 700;
+}
+
+.itemWithOutStock {
+    color: red;
+}
+
+.itemDetail-center {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemDetail-Container {
+
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemDetail-img {
+    max-height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.right-content{
+    padding: 20px;
+}
+
+.right-content span.price {
+    font-size: 18px;
+    color: #696969;
+    font-weight: 500;
+    display: block;
+    margin-top: 5px;
+    border-bottom: 1px solid rgb(226, 226, 226);
+    padding-bottom: 20px;
+}
+
+.left-content {
+    min-width: 370px;
+    max-width: 370px;
+}
+
+.right-content span {
+    font-size: 14px;
+    color: #aaaaaa;
+    font-weight: 500;
+    display: block;
+    margin-top: 25px;
+}
+
+.quantity-content {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid rgb(226, 226, 226);
+    border-bottom: 1px solid rgb(226, 226, 226);
+    width: 100%;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.itemDetail-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.main-border-button {
+    font-size: 13px;
+    border-color: #2a2a2a;
+    color: #2a2a2a;
+    padding: 12px 25px;
+    display: inline-block;
+    font-weight: 500;
+    background-color: #fff;
+    transition: all .3s;
+}
+
+.main-border-button:hover {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .itemDetail-Container {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .itemDetail-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .right-content{
+        padding: 0;
+    }
+
+    .itemDetail-img{
+        max-height: 400px;
+    }
+}

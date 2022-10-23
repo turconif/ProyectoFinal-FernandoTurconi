@@ -1,0 +1,29 @@
+.itemCountContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 0;
+    margin: 10px 0;
+}
+
+.itemCountSignal{
+    padding: 7px 10px 8px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.itemCountSignal:hover{
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.itemCountQuantity{
+    height: 40px;
+    padding: 0 5px;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid #dbdbdb;    
+}
