@@ -2,48 +2,52 @@ import React, { useRef } from 'react'
 import { ItemCount } from './ItemCount';
 import '../../styles/Item.css';
 import { AddToCart } from './AddToCart';
-import { productDetailApi } from '../../APIs/productsApi';
+import { productBdDetailApi } from '../../APIs/productsApi';
 import { useEffect, useState } from 'react';
+
 
 
 export const ItemDetail = ({ code }) => {
 
   const inputRef = useRef(1);
 
-  const [product, setProducts] = useState([]);
+  const [productDetail, setProductDetail] = useState([]);
 
-  const getProductDetail = async (dcode) => {
-    const apiProducts = await productDetailApi(dcode);
-    setProducts(apiProducts);
+
+
+  const getProductDetailBd = async (dcode) => {
+    try {      
+      setProductDetail(await productBdDetailApi(dcode));
+    } catch (error) {
+
+    }    
   }
-
+  
 
   useEffect(() => {
-    getProductDetail(code);
+    getProductDetailBd(code);
   }, [code]);
 
   return (
-    <div className='max-width'>
-      {product.map((p) => (
-        <div className='itemDetail-Container' key={p.productCode}>
+    <div className='max-width'>      
+        <div className='itemDetail-Container' key={productDetail.productCode}>
           <div className='left-content'>
-            <img src={p.image} className='itemDetail-img' alt={`Foto de ${p.title}`} />
+            <img src={productDetail.image} className='itemDetail-img' alt={`Foto de ${productDetail.title}`} />
           </div>
           <div className='right-content'>
             <div>
-              <h2>{p.title}</h2>
-              <span className='price'> ${p.price} </span>
-              <span> {p.detail} </span>
+              <h2>{productDetail.title}</h2>
+              <span className='price'> ${productDetail.price} </span>
+              <span> {productDetail.detail} </span>
               <div className='quantity-content'>
-                <ItemCount stock={p.stock} quantityRef={inputRef} />
+                <ItemCount stock={productDetail.stock} quantityRef={inputRef} />
               </div>
-              <div className='itemDetail-footer'>                
-                <AddToCart stock={p.stock !== 0} quantityRef={inputRef} />
+              <div className='itemDetail-footer'>
+                  <AddToCart productId={code} stock={productDetail.stock} quantityRef={inputRef} title={productDetail.title} price = {productDetail.price} />
               </div>
             </div>
           </div>
         </div>
-      ))}
     </div>
 
   )

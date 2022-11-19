@@ -7,11 +7,17 @@ export const ItemCount = ({stock, quantityRef}) => {
     const [quantity, setQuantity] = useState(1);
 
     const addQuantity = (e) => {
-        setQuantity(quantity === stock || stock === 0 ? quantity : quantity+1);
+        
+        if(stock !== 0){
+            setQuantity(quantity === stock ? quantity : quantity+1);
+        }        
     }
 
     const removeQuantity = (e) => {
-        setQuantity(quantity >1 ? quantity-1 : quantity)
+        if(stock !== 0){
+            setQuantity(quantity >1 ? quantity-1 : quantity)
+        }
+        
     }
 
     return (

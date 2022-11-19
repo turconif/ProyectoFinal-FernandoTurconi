@@ -115,6 +115,33 @@
     color: #fff;
 }
 
+.txt-align-center{
+    text-align: center;
+}
+
+.deleteBtn{
+    display: block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.totalContainer{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.totalStyle{
+    font-size: 20px;
+    margin-right: 20px;
+    font-weight: 700;
+}
+
+.buyStyle{
+    font-size: 20px;
+    margin-right: 20px;    
+}
+
 @media only screen and (min-width: 768px) {
 
     .itemDetail-Container {

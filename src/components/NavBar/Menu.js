@@ -24,11 +24,9 @@ export const Menu = () => {
                     <Navbar.Collapse>
                         <Container>
                             <Nav className='justify-content-end menu-nav' defaultActiveKey="/home" >
-                                <Nav.Link href='/Home' eventKey="Home" >Home</Nav.Link>
-                                <Nav.Link href='/Category/Hombre' >Hombre</Nav.Link>
-                                <Nav.Link href='/Category/Mujer' >Mujer</Nav.Link>
-                                <Nav.Link eventKey="Nosotros" >Nosotros</Nav.Link>
-                                <Nav.Link eventKey="Contacto" >Contacto</Nav.Link>
+                                <Link to={`/Home`} className='navStyles' >Home</Link>
+                                <Link to={`/Category/Hombre`}  className='navStyles'>Hombre</Link>
+                                <Link to={`/Category/Mujer`}  className='navStyles'>Mujer</Link> 
                             </Nav>
                         </Container>
                     </Navbar.Collapse>
